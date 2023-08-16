@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quantic_gui", "Quantic_gui\Quantic_gui.csproj", "{48948285-4D23-4B84-815B-6F2EB7AC5E57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48948285-4D23-4B84-815B-6F2EB7AC5E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48948285-4D23-4B84-815B-6F2EB7AC5E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48948285-4D23-4B84-815B-6F2EB7AC5E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48948285-4D23-4B84-815B-6F2EB7AC5E57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BD3234F-4CFE-4F55-8E99-46A16A76468A}
+	EndGlobalSection
+EndGlobal
