@@ -162,7 +162,7 @@ namespace Quantic_gui
                     {
                         Image = image,
                         SizeMode = PictureBoxSizeMode.StretchImage,
-                        Location = new Point(screenWidth / 2 + 700 * (i > 0 ? 1 : -1) + 200 * (i - 1) - 100, screenHeight / 2 + 200 * j),
+                        Location = new Point(screenWidth / 2 + 400 * (i > 0 ? 1 : -1) + 200 * (i - 1) + 100, screenHeight / 2 + 200 * j),
                         Width = 200,
                         Height = 200
                     };
@@ -401,18 +401,20 @@ namespace Quantic_gui
                 {
                         selectedPlayerOne!.Location = where.Location;
                         selectedPlayerOne!.BringToFront();
-                        selectedPlayerOne!.Click -= ProcessShapeClicked;
+                    selectedPlayerOne.BackColor = Color.White;
+                    selectedPlayerOne!.Click -= ProcessShapeClicked;
        
                 }
                 else
                 {
                     selectedPlayerTwo!.Location = where.Location;
                     selectedPlayerTwo!.BringToFront();
+                    selectedPlayerTwo.BackColor = Color.White;
                     selectedPlayerTwo!.Click -= ProcessShapeClicked;
                 }
 
 
-                where.Visible = false;
+               // where.Visible = false;
             }));
 
         }
@@ -446,19 +448,19 @@ namespace Quantic_gui
         {
             int screenWidth = Screen.PrimaryScreen.Bounds.Width;
             int screenHeight = Screen.PrimaryScreen.Bounds.Height;
-
+    
 
             for (int row = -2; row < 2; row++)
             {
                 for (int col = -2; col < 2; col++)
                 {
-                    Image image = (row + col) % 2 == 0 ? Image.FromFile(@"white.png") : Image.FromFile(@"black.png");
+                    Image image = Image.FromFile(@"white.png");
 
                     PictureBox pictureBox = new PictureBox
                     {
                         Image = image,
                         SizeMode = PictureBoxSizeMode.StretchImage,
-                        Location = new Point(screenWidth / 2 + 200 * row, screenHeight / 2 + 200 * col),
+                        Location = new Point(screenWidth / 2 + 200 * row + (row >= 0 ? 5 : 0), screenHeight / 2 + 200 * col + (col >= 0 ? 5 : 0)),
                         Width = 200,
                         Height = 200
                     };
@@ -470,6 +472,17 @@ namespace Quantic_gui
                     pictureBox.Click += ProcessSquareClicked;
                 }
             }
+
+            PictureBox background = new PictureBox
+            {
+                BackColor = Color.Black,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Location = new Point(screenWidth / 2 - 405, screenHeight / 2 - 405),
+                Width = 815,
+                Height = 815
+            };
+
+            Controls.Add(background);
 
             DrawFigures(Controls);
         }

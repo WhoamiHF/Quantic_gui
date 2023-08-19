@@ -24,9 +24,11 @@ namespace Quantic_gui
             game = new Game();
             logger = new Logger(this);
             logic = new GameLogic(logger);
-            boardViewer = new GUIBoardViewer(game,logic,this,logic.Logger!);
+            boardViewer = new GUIBoardViewer(game, logic, this, logic.Logger!);
             PlayerXComputer.Visible = false;
             PlayerXPlayer.Visible = false;
+            pictureBox1.Visible = false;
+
             boardViewer.SetBoard(Controls);
             //game.SetComputerPlayer(logic.Logger!);
             game.State = Game.GameState.FIRST_PLAYER_TURN;
@@ -40,6 +42,8 @@ namespace Quantic_gui
             boardViewer = new GUIBoardViewer(game, logic, this, logic.Logger!);
             PlayerXComputer.Visible = false;
             PlayerXPlayer.Visible = false;
+            pictureBox1.Visible = false;
+
             boardViewer.SetBoard(Controls);
             game.SetComputerPlayer(logic.Logger!);
             game.State = Game.GameState.FIRST_PLAYER_TURN;
