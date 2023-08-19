@@ -95,7 +95,7 @@ namespace Quantic_console
                 {
                     move = player1.SelectMove(gameLogic, board, player1, player2);
                 }
-                gameLogic.MakeMove(move, board,player1);
+                gameLogic.MakeMove(move!, board,player1);
 
                 List<Move> moves = gameLogic.GetCurrentPossibleMoves(player1,null);
                 foreach(Move move2 in moves)
@@ -103,7 +103,7 @@ namespace Quantic_console
                     Console.WriteLine($"Move {move2}");
                 }
 
-                if (GameLogic.CheckWin(board, move))
+                if (GameLogic.CheckWin(board, move!))
                 {
                     state = GameState.FIRST_PLAYER_WON;
                     viewer.ShowWin(Piece.PlayerID.PLAYER_ONE);
@@ -132,9 +132,9 @@ namespace Quantic_console
                 {
                     move = player2.SelectMove(gameLogic, board, player2, player1);
                 }
-                gameLogic.MakeMove(move, board,player2);
+                gameLogic.MakeMove(move!, board,player2);
                 
-                if (GameLogic.CheckWin(board, move))
+                if (GameLogic.CheckWin(board, move!))
                 {
                     state = GameState.SECOND_PLAYER_WON;
                     viewer.ShowWin(Piece.PlayerID.PLAYER_TWO);

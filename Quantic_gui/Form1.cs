@@ -19,6 +19,9 @@ namespace Quantic_gui
             InitializeComponent();
         }
 
+        /**
+         * Starts game in mode player x player
+         */
         public void SetPlayerXPlayer(object sender, EventArgs e)
         {
             game = new Game();
@@ -34,6 +37,9 @@ namespace Quantic_gui
             game.State = Game.GameState.FIRST_PLAYER_TURN;
         }
 
+        /**
+         * Starts game in mode player x computer
+         */
         public void SetPlayerXComputer(object sender, EventArgs e)
         {
             game = new Game();

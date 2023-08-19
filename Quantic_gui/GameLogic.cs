@@ -19,7 +19,7 @@ namespace Quantic_console
     {
         Dictionary<Piece.ShapeType, HashSet<Coordinates>> possibleTurnsPlayerOne;
         Dictionary<Piece.ShapeType, HashSet<Coordinates>> possibleTurnsPlayerTwo;
-        Logger? logger;
+        readonly Logger? logger;
 
         // No logging will be available by using this constructor, fills dictionary for each player
         //with possible locations for different shapes the player has
@@ -459,12 +459,12 @@ namespace Quantic_console
                     return false;
                 }
 
-                if (shapes.Contains(board.Squares[move.X][i].Piece.Shape))
+                if (shapes.Contains(board.Squares[move.X][i].Piece!.Shape))
                 {
                     return false;
                 }
 
-                shapes.Add(board.Squares[move.X][i].Piece.Shape);
+                shapes.Add(board.Squares[move.X][i].Piece!.Shape);
             }
 
             return true;

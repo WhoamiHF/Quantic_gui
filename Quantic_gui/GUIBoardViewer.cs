@@ -412,9 +412,6 @@ namespace Quantic_gui
                     selectedPlayerTwo.BackColor = Color.White;
                     selectedPlayerTwo!.Click -= ProcessShapeClicked;
                 }
-
-
-               // where.Visible = false;
             }));
 
         }
